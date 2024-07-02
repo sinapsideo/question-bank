@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao Site de Questões</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao Site de Questões</h1>
+        <button id="openFormBtn">Adicionar Nova Questão</button>
+
+        <div id="formContainer" class="form-container">
+            <form id="questionForm">
+                <label for="question">Questão:</label>
+                <textarea id="question" name="question" required></textarea>
+
+                <label for="option1">Alternativa 1:</label>
+                <input type="text" id="option1" name="option1" required>
+
+                <label for="option2">Alternativa 2:</label>
+                <input type="text" id="option2" name="option2" required>
+
+                <label for="option3">Alternativa 3:</label>
+                <input type="text" id="option3" name="option3" required>
+
+                <label for="option4">Alternativa 4:</label>
+                <input type="text" id="option4" name="option4" required>
+
+                <label for="image">Imagem:</label>
+                <input type="file" id="image" name="image" accept="image/*">
+
+                <label for="answer">Gabarito:</label>
+                <input type="text" id="answer" name="answer" required>
+
+                <button type="submit">Salvar Questão</button>
+            </form>
+        </div>
+
+        <h2>Repositório de Questões</h2>
+        <form id="themeForm">
+            <label for="theme">Escolha o Tema:</label>
+            <select id="theme" name="theme">
+                <option value="matematica">Matemática</option>
+                <option value="fisica">Física</option>
+                <option value="quimica">Química</option>
+                <option value="biologia">Biologia</option>
+            </select>
+            <button type="submit">Buscar Questões</button>
+        </form>
+
+        <div id="questionsContainer" class="questions-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
